@@ -10,11 +10,8 @@
         $onboarding_process = $_POST['onboarding_process'];
         $about_features = $_POST['about_features'];
         $feature_request = $_POST['feature_request'];
-        $spotlight_status = $_POST['bugs'];
-
-        
-
-        // https://legacydocs.hubspot.com/docs/methods/contacts/create_or_update
+        $bugs = $_POST['bugs'];
+        $features_and_functionality = $_POST['features_and_functionality'];
 
 
 // Set up the API endpoint and authentication
@@ -25,39 +22,43 @@ $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $a
 
 // Set up the contact data to be sent to HubSpot
 $contactData = array(
-    'properties' => array(
-        array(
-            'property' => 'email',
-            'value' => $email
-         ),
-         array(
-            'property' => 'overall_experience',
-            'value' => $overall_experience
-        ),
-        array(
-            'property' => 'ease_of_use',
-            'value' => $ease_of_use
-    ),
-    array(
-        'property' => 'onboarding_process',
-        'value' => $onboarding_process
-    ),
-    array(
-        'property' => 'about_features',
-        'value' => $about_features
-    ),
-    array(
-        'property' => 'feature_request',
-        'value' => $feature_request 
-    ),
-    
-    array(
-      'property' => 'spotlight_status',
-      'value' => $spotlight_status 
-    )
- 
-    )
-);    
+  'properties' => array(
+      array(
+          'property' => 'email',
+          'value' => $email
+       ),
+       array(
+          'property' => 'overall_experience',
+          'value' => $overall_experience
+      ),
+      array(
+          'property' => 'ease_of_use',
+          'value' => $ease_of_use
+  ),
+  array(
+      'property' => 'onboarding_process',
+      'value' => $onboarding_process
+  ),
+  array(
+      'property' => 'about_features',
+      'value' => $about_features
+  ),
+  array(
+      'property' => 'feature_request',
+      'value' => $feature_request
+  ),
+
+  array(
+    'property' => 'bugs',
+    'value' => $bugs
+  ),
+  array(
+    'property' => 'features_and_functionality',
+    'value' => $features_and_functionality
+  )
+
+  )
+);  
 
 
 // Send the contact data to HubSpot using cURL
@@ -110,7 +111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <title>Melboss Music | Feedback</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Melboss Music - Music Marketing para Empresas ">
+    <meta name="description" content="Melboss Music - Elevate your Music Career ">
     <meta name="keywords" content="music marketing, digital marketing, marketing musical, marketing para festivales, campañas de anuncios, promocion en spotify, promocion en tiktok">
     <meta name="author" content="melboss Music">
 
@@ -297,14 +298,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="position-relative bg-secondary rounded-3 py-5 mb-2">
     <div class="row pb-2 py-md-3 py-lg-5 px-4 px-lg-0 position-relative zindex-3">
       <div class="col-xl-3 col-lg-4 col-md-5 offset-lg-1">
-        <h2 class="h2 mb-2">Do you want to work with us??</h2>
-        <h1 class="display-4 pb-2 pb-sm-3 text-gradient-primary" >Let's talk!</h1>
+        <h2 class="h2 mb-2">Your Feedback Matters! Help Us Improve and Create an Amazing User Experience.</h2>
+        <h1 class="display-4 pb-2 pb-sm-3 text-gradient-primary" >Share Your Voice and Shape Our Platform's Future</h1>
       </div>
       <form class="col-lg-6 col-md-7 offset-xl-1 needs-validation" novalidate method="POST">
         <div class="row">
           <div class="col-12 mb-4">
             <label for="email" class="form-label fs-base">Email</label>
-            <input type="email" id="email"  name="email" class="form-control form-control-lg" required>
+            <input type="email" id="email"  name="email" class="form-control form-control-lg" required value='<?php echo $_GET["email"]; ?>'>
             <div class="invalid-feedback">Please enter your valid email address!</div>
           </div>
           <div class="col-12 mb-4">
@@ -351,6 +352,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="ease_of_use" id="ease_of_use5" value="5" required/>
               <label class="form-check-label" for="ease_of_use5">5</label>
+            </div>
+          </div>
+          <div class="col-12 mb-4">
+          <label for="features_and_functionality" class="form-label fs-base">On a scale of 1 to 5, how would you rate the features and functionality of the product?</label><br>
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="features_and_functionality" id="features_and_functionality1" value="1" required/>
+            <label class="form-check-label" for="features_and_functionality1">1</label>
+            </div>
+            <div class="form-check form-check-inline ">
+              <input class="form-check-input" type="radio" name="features_and_functionality" id="features_and_functionality2" value="2" required/>
+              <label class="form-check-label" for="features_and_functionality2">2 </label>
+            </div>
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="features_and_functionality" id="features_and_functionality3" value="3" required/>
+            <label class="form-check-label" for="features_and_functionality3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="features_and_functionality" id="features_and_functionality4" value="4" required/>
+              <label class="form-check-label" for="features_and_functionality3">4 </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="features_and_functionality" id="features_and_functionality5" value="5" required/>
+              <label class="form-check-label" for="features_and_functionality5">5</label>
             </div>
           </div>
         <div class="col-12 mb-4">
