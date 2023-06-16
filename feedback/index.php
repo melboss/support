@@ -76,9 +76,9 @@ if ($response) {
     $result = json_decode($response, true);
     if (isset($result['vid'])) {
         // echo 'Contact created with ID ' . $result['vid'] . '.';
-        echo '<div class="alert alert-success" role="alert">Gracias por contactarnos, en breve nos comunicaremos con usted.</div>';
+        echo '<div class="alert alert-success" role="alert">Thank you for taking the time to provide us with your valuable feedback! </div>';
     } else {
-        echo '<div class="alert alert-info" role="alert">Ha ocurrido un error al intentar enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.</div>';
+        echo '<div class="alert alert-info" role="alert">An error occurred while attempting to submit your feedback. Please try again later.</div>';
     }
 } else {
     echo 'Error creating contact.';
