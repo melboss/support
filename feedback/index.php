@@ -305,9 +305,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <form class="col-lg-6 col-md-7 offset-xl-1 needs-validation" novalidate method="POST">
         <div class="row">
           <div class="col-12 mb-4">
-            
             <?php if ($_GET["email"]) : ?> 
-              <input type="email" id="email"  name="email" class="form-control form-control-lg" required disabled hidden  value='<?php echo $_GET["email"]; ?>'>
+              <label for="email" class="form-label fs-base"></label>
+              <input type="email" id="email"  name="email" class="form-control form-control-lg" required disabled value='<?php echo $_GET["email"]; ?>'>
               <?php  else : ?>
                 <label for="email" class="form-label fs-base">Email</label>
             <input type="email" id="email"  name="email" class="form-control form-control-lg" required>
