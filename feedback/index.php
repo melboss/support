@@ -306,7 +306,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="row">
           <div class="col-12 mb-4">
             <label for="email" class="form-label fs-base">Email</label>
-            <input type="email" id="email"  name="email" class="form-control form-control-lg" required value='<?php echo $_GET["email"]; ?>'>
+            <?php if  if (!empty($_GET["email"])) { ?> 
+              <input type="email" id="email"  name="email" class="form-control form-control-lg" required disabled value='<?php echo $_GET["email"]; ?>'>
+              <?php } else { ?>
+            <input type="email" id="email"  name="email" class="form-control form-control-lg" required>
+            <?php } ?>
             <div class="invalid-feedback">Please enter your valid email address!</div>
           </div>
           <div class="col-12 mb-4">
