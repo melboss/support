@@ -298,8 +298,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="position-relative bg-secondary rounded-3 py-5 mb-2">
     <div class="row pb-2 py-md-3 py-lg-5 px-4 px-lg-0 position-relative zindex-3">
       <div class="col-xl-3 col-lg-4 col-md-5 offset-lg-1">
-        <h2 class="h2 mb-2">Your Feedback Matters! Help Us Improve and Create an Amazing User Experience.</h2>
-        <h1 class="display-4 pb-2 pb-sm-3 text-gradient-primary" >Share Your Voice and Shape Our Platform's Future</h1>
+      <h1 class="display-4 pb-2 pb-sm-3 text-gradient-primary" >Share Your Voice and Shape Our Platform's Future</h1>
+        <p class="p mb-2">Your Feedback Matters! Help Us Improve and Create an Amazing User Experience.</p>
+       
       </div>
       <form class="col-lg-6 col-md-7 offset-xl-1 needs-validation" novalidate method="POST">
         <div class="row">
