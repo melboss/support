@@ -26,7 +26,7 @@
     "sass": "^1.57.1"
   },
   "dependencies": {
-    "@lottiefiles/lottie-player": "^1.6.3",
+    "@lottiefiles/lottie-player": "^1.7.1",
     "bootstrap": "^5.2.3",
     "boxicons": "^2.1.4",
     "cleave.js": "^1.6.0",
